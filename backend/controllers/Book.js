@@ -16,7 +16,7 @@ const registerBook = async(req,res) =>{
     const result = await bookSchema.save();
     if (!result)return res.status(400).send("Failed to register this book");
 
-    res.status(200).send({book});
+    res.status(200).send({result});
 }
 
 export default {registerBook};
